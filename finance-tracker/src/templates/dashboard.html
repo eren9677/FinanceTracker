@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<h1>Financial Dashboard</h1>
+<section id="summary">
+    <h2>Expense Summary</h2>
+    <div id="expense-chart">
+        <!-- Visualization will be rendered here -->
+    </div>
+</section>
+<section id="suggestions">
+    <h2>Suggestions to Save Money</h2>
+    <ul>
+        {% for suggestion in suggestions %}
+            <li>{{ suggestion }}</li>
+        {% endfor %}
+    </ul>
+</section>
+{% endblock %}
